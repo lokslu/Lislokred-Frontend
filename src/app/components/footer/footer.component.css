@@ -1,0 +1,27 @@
+.Footer {
+    flex: 0 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background: #3B3F3F;
+    border-radius: 30px;
+    margin: 10px;
+}
+
+.MainText {
+    font-family: Righteous;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 50px;
+    color: #4EA6A7;
+    margin: 20px;
+}
+
+.AdditionalText {
+    font-family: Nunito;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    color: #5C5C5C;
+    margin: 20px;
+}

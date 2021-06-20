@@ -1,0 +1,49 @@
+<ng-template #Rate let-fill="fill" class="">
+
+    <img [attr.src]="fill === 100?'../../../assets/MovieTile/rate/RateStarOn.png':'../../../assets/MovieTile/rate/RateStarOff.png'" alt="Off" class="RateStar">
+</ng-template>
+
+<ng-template #tipContent>
+    {{movie?.Name}}
+</ng-template>
+
+<div class="AnalogImageName">{{movie?.Name}} </div>
+
+<div (mouseleave)="DropdownSelect.close();" class="tile BaseFont" tooltipClass="Tooltip" [style.background-image]="movie?.UrlData ?'url('+movie?.UrlData+')':'https://only-to-top.ru/images/coding/2019/2019-09-07-plavnoe-poyavlenie-bloka-css/1.png'" [ngbTooltip]="tipContent">
+    <a [routerLink]="'/movie/'+movie.Id" style="width: 100%;height:100%">
+
+    </a>
+
+
+
+    <div ngbDropdown placement="top-right" class="Dropdown" #DropdownSelect="ngbDropdown">
+        <img ngbDropdownToggle src="../../../assets/MovieTile/add.png" class="AddButton">
+        <div class="DropdownMenu" ngbDropdownMenu>
+            <button class="DropdownItem" ngbDropdownItem (click)="chengeState(null)" *ngIf="movie?.State!=null"> Удалить</button>
+            <button class="DropdownItem" ngbDropdownItem (click)="chengeState(false)" *ngIf="movie?.State!=false">Посмотрю</button>
+            <button class="DropdownItem" ngbDropdownItem (click)="chengeState(true)" *ngIf="movie?.State!=true">Посмотрел</button>
+
+        </div>
+
+    </div>
+
+
+    <ngb-rating [resettable]="true" *ngIf="movie?.State==true" class="Rate" [rate]="movie?.Rate" [starTemplate]="Rate" [readonly]="false" [max]="10" (rateChange)="chengeRate($event)"></ngb-rating>
+
+    <!-- <img [attr.src]="movie?.UrlData" style="width: 100%;" class=""> -->
+</div>
+<!-- <ul> 
+    <li>
+
+        <span>Id {{movie?.Id}}</span>
+    </li>
+    <li>
+        <span> {{movie?.Name}}</span>
+    </li>
+    <li>
+        <span>Rate {{movie?.Rate}}</span>
+    </li>
+    <li>
+        <span>State {{movie?.State}}</span>
+    </li>
+</ul> -->

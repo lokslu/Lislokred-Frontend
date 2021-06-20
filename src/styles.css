@@ -1,0 +1,201 @@
+/*You can add global styles to this file,
+and also import other style files
+body {
+} */
+
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+html,
+body {
+    height: 100%;
+    margin: 0px;
+    /* font-family: Roboto, "Helvetica Neue", sans-serif; */
+}
+
+.BaseFont {
+    font-family: Nunito;
+    font-style: normal;
+}
+
+.flexContainer {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    width: 100%;
+    height: 100%;
+}
+
+.HalfWindow
+/*половынка окна регистрации */
+
+{
+    display: block;
+    text-align: center;
+    width: 50%;
+}
+
+.SizeFailde {
+    margin: 0 auto;
+    width: 300px;
+}
+
+.Field {
+    background: #FFFFFF;
+    border: 1px solid rgba(59, 63, 63, 0.17);
+    box-sizing: border-box;
+    box-shadow: 2px 3px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 11px;
+    outline: none;
+    /*убирает обводку браужера при фокусировке*/
+    transition: 0.3s;
+    /* height: 40px; */
+    width: 300px;
+    padding: 10px 12px;
+    /*text*/
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 22px;
+    color: #3b3f3f;
+}
+
+.Field::placeholder {
+    /*placeholder*/
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 22px;
+    color: rgba(59, 63, 63, 0.28);
+}
+
+.Field:focus {
+    background: #FFFFFF;
+    border: 1px solid #50A6A7;
+    box-sizing: border-box;
+    box-shadow: 5px 6px 10px rgba(80, 166, 167, 0.55);
+    border-radius: 11px;
+}
+
+.FieldError {
+    background: #FFFFFF;
+    border: 1px solid #F32B2B;
+    box-sizing: border-box;
+    box-shadow: 5px 6px 10px rgba(243, 43, 43, 0.28);
+    border-radius: 11px;
+}
+
+.Field:hover {
+    background: #FFFFFF;
+    border: 1px solid #3B3F3F;
+    box-sizing: border-box;
+    box-shadow: 5px 6px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 11px;
+}
+
+.Text {
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 25px;
+}
+
+.TextInFormHeading {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    font-weight: bold;
+    font-size: 48px;
+    line-height: 65px;
+}
+
+.TextError {
+    color: #F32B2B;
+    display: block;
+    font-size: 14px;
+    padding: 0 8px 0 8px;
+}
+
+.TextInFormSlogan {
+    font-weight: 300;
+    font-size: 24px;
+    line-height: 33px;
+}
+
+.PaddingTextField {
+    padding: 0 0 0 8px;
+}
+
+.MarginField {
+    margin: 0 0 10px 0;
+}
+
+.MarginLabel {
+    display: block;
+    margin: 10px 0 10px 0;
+}
+
+.SubmitButon {
+    width: 247px;
+    height: 48px;
+    background: #3A6B6B;
+    box-shadow: 6px 9px 7px rgba(3, 79, 79, 0.1);
+    border-radius: 15px;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 25px;
+    letter-spacing: 0.12em;
+    color: #F1FFFF;
+    outline: none;
+    border: none;
+    transition-duration: 0.1s;
+}
+
+.SubmitButon:hover {
+    background: #50A6A7;
+    box-shadow: 0px 9px 36px rgba(80, 166, 167, 0.15);
+    border-radius: 15px;
+}
+
+.SubmitButon:active {
+    background: #2C5159;
+    box-shadow: inset 6px 9px 7px rgba(0, 0, 0, 0.22);
+    border-radius: 15px;
+}
+
+.SubmitButon:disabled {
+    background: #BABFB9;
+    box-shadow: 6px 9px 7px rgba(85, 91, 91, 0.1);
+}
+
+.LoadingSVG {
+    padding: 4px;
+}
+
+
+/*Text-aligt: Center*/
+
+.TA-C {
+    text-align: center;
+}
+
+
+/*Text-aligt: :left*/
+
+.TA-L {
+    text-align: left;
+}
+
+.textlink {
+    color: #3B3F3F;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 18px;
+    cursor: pointer;
+}
+
+.textlink:hover {
+    color: #262929;
+    text-decoration: none;
+}
+
+.textlinkContainer {
+    margin: 10px;
+    text-align: left;
+    padding: 0 20px;
+}

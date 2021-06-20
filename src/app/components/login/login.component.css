@@ -1,0 +1,24 @@
+.FormLogin {
+    display: flex;
+    background: #F1FFFF;
+    box-shadow: 12px 13px 40px rgba(59, 63, 63, 0.31);
+    border-radius: 58px;
+    width: 1124px;
+    height: auto;
+    color: #3B3F3F;
+}
+
+@media (max-width:650px) {
+    #Half_A_Picture {
+        display: none;
+    }
+    .HalfWindow {
+        width: auto;
+        margin: 0 auto;
+    }
+    .FormLogin {
+        box-shadow: none;
+        border-radius: 0;
+        height: 100%;
+    }
+}

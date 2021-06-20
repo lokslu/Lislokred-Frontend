@@ -1,0 +1,154 @@
+    .tile {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        width: 180px;
+        height: 260px;
+        box-shadow: 5px 5px 13px #00000040;
+        background-position: center;
+        border-radius: 30px;
+        transition: 0.3s;
+        background-size: cover;
+    }
+    
+    .tile:hover {
+        -webkit-transform: scale(1.1);
+        -ms-transform: scale(1.1);
+        transform: scale(1.1);
+    }
+    /* .tile:focus {
+    border: 2px solid salmon;
+} */
+    
+    .Dropdown {
+        width: 45px;
+        position: absolute;
+        bottom: 10px;
+        right: 10px;
+    }
+    
+    .AddButton {
+        opacity: 0;
+        display: block;
+        transition: 0.3s;
+        width: 45px;
+    }
+    
+    .tile:hover .AddButton {
+        transition: 0.3s;
+        opacity: 1;
+        display: block;
+    }
+    
+    .AddButton:hover {
+        transform: scale(1.1);
+    }
+    
+    .Rate {
+        display: flex!important;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        opacity: 0;
+        background-color: #92D1C8;
+        border-radius: 20px;
+        padding: 4px 4px;
+        transition: 0.3s;
+        position: absolute;
+        transition: 0.3s;
+    }
+    
+    .Rate:focus {
+        outline: none;
+    }
+    
+    .tile:hover .Rate {
+        display: flex!important;
+        opacity: 1;
+        transition: 0.3s;
+        margin: 6px;
+    }
+    
+    .RateStar {
+        width: 30px;
+        height: 30px;
+        transition: 0.3s;
+    }
+    
+    .RateStar:active {
+        background-color: #00000072;
+        border-radius: 100px;
+    }
+    
+    .Tooltip {
+        opacity: 1;
+        background-color: #92D1C8;
+        transition: 0.3s;
+        border-radius: 20px;
+    }
+    
+    .Tooltip .tooltip-inner {
+        background-color: #92D1C8;
+        opacity: 1;
+        font-size: 130%;
+        font-weight: 500;
+        border-radius: 20px;
+    }
+    
+    .Tooltip .arrow::before {
+        opacity: 1;
+        border-top-color: #92D1C8;
+    }
+    
+    .DropdownMenu {
+        overflow: hidden;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        z-index: 100;
+        display: none;
+        float: left;
+        min-width: 10rem;
+        padding: 0;
+        /* margin: .125rem 0 0; */
+        font-size: 1rem;
+        color: #212529;
+        /* text-align: left; */
+        list-style: none;
+        background-color: #fff;
+        background-clip: padding-box;
+        border: 0;
+        border-radius: 20px;
+        filter: drop-shadow(5px 6px 10px rgba(0, 0, 0, 0.1));
+    }
+    
+    .DropdownItem {
+        padding: .5rem 1.5rem;
+        box-sizing: border-box;
+        text-align: center;
+        font-family: Nunito;
+        font-style: normal;
+        font-weight: 500;
+        color: #2C5159;
+    }
+    
+    .DropdownItem:hover {
+        color: #F1FFFF;
+        background-color: #92D1C8;
+    }
+    
+    .DropdownItem:active {
+        background-color: #3A6B6B;
+    }
+    
+    .AnalogImageName {
+        z-index: 0;
+        padding: 10%;
+        color: cadetblue;
+        font-size: xx-large;
+        line-height: 30px;
+        font-weight: 500;
+        position: absolute;
+        top: 0;
+    }

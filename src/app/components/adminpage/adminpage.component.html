@@ -1,0 +1,14 @@
+<p>Название</p>
+<input required type="text">
+<p>Дата выхода</p>
+<input required type="datetime">
+<p>Описание</p>
+<input required type="text">
+<p>Жанры</p>
+<p>Фото</p>
+<input required type="file" accept="image/*" (change)="uploadfile($event)">
+
+<div *ngIf="selectedImage" style="background: no-repeat;
+background-size: contain;
+height: 116px;" [ngStyle]="{'background-image':'url('+selectedImage.src+')'}"></div>
+<button>Добавить фильм</button>

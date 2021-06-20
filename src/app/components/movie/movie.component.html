@@ -1,0 +1,42 @@
+<head>
+    <title>
+        {{movie?.Name}}
+    </title>
+</head>
+<app-header></app-header>
+
+<div class="container BaseFont">
+    <div class="MainInformation">
+        <img class="MainImage" [attr.src]="movie?.UrlData" alt="">
+        <div class="MainText">
+
+            <div class="Name">{{movie?.Name}}</div>
+            <div class="Description">{{movie?.Description}}</div>
+            <div class="HeadingWord">
+                Ganres:
+            </div>
+            <div class="genres">
+
+                <div class="genre" *ngFor="let genre of movie?.Genres; let i = index">{{genre.Data}}</div>
+            </div>
+
+        </div>
+    </div>
+    <div class="FilmUnitsContainer">
+        <div class="HeadingWord">
+            Film crew:
+        </div>
+        <div class="FilmUnits">
+
+            <div *ngFor="let unit of filmingUnits; let i = index">
+                <img class="UnitPhoto" [attr.src]="unit?.UrlData" alt="">
+                <div>{{unit.FirstName}}</div>
+                <div>{{unit.LastName}}</div>
+            </div>
+        </div>
+    </div>
+    <div>
+
+    </div>
+
+</div>

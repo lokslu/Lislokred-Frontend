@@ -1,0 +1,32 @@
+<head>
+    <title>Catalog</title>
+</head>
+<app-header></app-header>
+
+<!-- <app-movie-tile *ngFor="let movie3 of AllMovie; let i = index" class="MovieTile" [movie]="movie3"></app-movie-tile> -->
+
+<ngx-spinner *ngIf="true==loading" bdColor="rgba(0, 0, 0, 0.8)" size="medium" color="#fff" type="pacman" [fullScreen]="true">
+</ngx-spinner>
+<mat-tab-group headerPosition="above " (selectedTabChange)="TabChange($event) " mat-align-tabs="center">
+
+    <mat-tab label="To be seen">
+        <p style="color: white"> Loading... </p>
+        <div *ngIf="false==loading" class="Movietiles">
+            <app-movie-tile *ngFor="let movie1 of Movie; let i = index" class="MovieTile" [movie]="movie1"></app-movie-tile>
+        </div>
+    </mat-tab>
+
+    <mat-tab label="Viewed">
+        <p style="color: white"> Loading... </p>
+        <div *ngIf="false==loading" class="Movietiles">
+            <app-movie-tile *ngFor="let movie2 of Movie; let i = index" class="MovieTile" [movie]="movie2"></app-movie-tile>
+        </div>
+    </mat-tab>
+
+    <mat-tab label="All">
+        <p style="color: white"> Loading... </p>
+        <div *ngIf="false==loading" class="Movietiles">
+            <app-movie-tile *ngFor="let movie3 of Movie; let i = index" class="MovieTile" [movie]="movie3"></app-movie-tile>
+        </div>
+    </mat-tab>
+</mat-tab-group>

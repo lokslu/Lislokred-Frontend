@@ -1,0 +1,21 @@
+.Movietiles {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 80%;
+    margin: 70px auto;
+    transition: 0.3s;
+}
+
+.MovieTile {
+    position: relative;
+    margin: 24px 20px;
+    width: 180px;
+    height: 260px;
+}
+
+.MovieTile:hover {
+    transform: scale(1);
+}

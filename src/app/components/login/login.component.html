@@ -1,0 +1,54 @@
+<head>
+    <title>Login</title>
+</head>
+<div class="flexContainer">
+    <form autocomplete="on" [formGroup]="FormLogin" (ngSubmit)="onSubmit()" class="FormLogin BaseFont">
+        <div class="HalfWindow " id="Half_A_Picture">
+            <div style="height: 100%; display: flex; align-items: center; justify-content: center;">
+                <img style="width: 90%;
+                height: auto;
+                padding: 20px;" src="assets/LoginFiles/peaple.png" alt="то что вам увидеть не дано">
+            </div>
+
+        </div>
+        <div class="HalfWindow">
+            <h1 class="TextInFormHeading">Sing In</h1>
+            <div class="SizeFailde TA-L">
+                <label class="MarginLabel Text PaddingTextField" for="Email">Email:</label>
+                <input formControlName="Email" type="email" id="Email" class="Field MarginField" [ngClass]="{FieldError:FormLogin.controls['Email'].invalid && FormLogin.controls['Email'].touched}" placeholder="Email">
+                <div *ngIf="FormLogin.controls['Email'].invalid && (FormLogin.controls['Email'].touched || FormLogin.controls['Email'].dirty)">
+                    <span class="TextError" *ngIf="FormLogin.controls['Email']?.errors?.required ">Обязательное поле</span>
+                    <span class="TextError" *ngIf="FormLogin.controls['Email']?.errors?.email">Не верная форма почты</span>
+                </div>
+                <label class="MarginLabel Text PaddingTextField" for="Password">Password:</label>
+                <input autocomplete="on" formControlName="Password" type="password" id="Password" class="Field MarginField" [ngClass]="{FieldError:FormLogin.controls['Password'].invalid && FormLogin.controls['Password'].touched}" placeholder="Password">
+                <div *ngIf="FormLogin.controls['Password'].invalid && (FormLogin.controls['Password'].touched || FormLogin.controls['Password'].dirty)">
+                    <span class="TextError" *ngIf="FormLogin.controls['Password'].errors.invalidMsg">{{FormLogin.controls['Password'].errors.invalidMsg}}</span>
+                    <span class="TextError" *ngIf="FormLogin.controls['Password']?.errors?.required ">Обязательное поле</span>
+                </div>
+                <div class="TA-C" style="margin: 10% 0;">
+                    <button [disabled]="FormLogin.invalid" type="submit" class="BaseFont SubmitButon TA-C">
+                        <div *ngIf="!logined" >Login</div>
+                        <svg *ngIf="logined"
+                        height="80%" class="LoadingSVG" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M79.8727 20.1273C82.9007 17.0993 82.9296 12.1321 79.4703 9.60812C73.7835 5.459 67.2598 2.53972 60.3147 1.0755C50.8289 -0.924386 40.9663 -0.123569 31.9274 3.38047C22.8885 6.88451 15.0631 12.9406 9.40391 20.8117C3.74468 28.6827 0.495656 38.0292 0.0523131 47.7134C-0.39103 57.3976 1.99044 67.0018 6.90682 75.357C11.8232 83.7122 19.0625 90.458 27.7434 94.7733C36.4244 99.0885 46.1726 100.787 55.8014 99.6623C62.8512 98.8388 69.6144 96.5278 75.6565 92.9156C79.3319 90.7183 79.757 85.7692 77.0183 82.4772V82.4772C74.2797 79.1853 69.4136 78.8307 65.594 80.7666C61.984 82.5963 58.062 83.7856 54.0021 84.2599C47.3596 85.0358 40.6347 83.8641 34.6461 80.8871C28.6575 77.9102 23.6635 73.2566 20.2719 67.4927C16.8803 61.7288 15.2374 55.1033 15.5432 48.4226C15.8491 41.7419 18.0904 35.2941 21.9945 29.8642C25.8986 24.4343 31.2969 20.2565 37.5325 17.8392C43.768 15.4219 50.5718 14.8695 57.1157 16.2491C61.1152 17.0923 64.9122 18.635 68.3398 20.7869C71.9666 23.0637 76.8448 23.1552 79.8727 20.1273V20.1273Z" fill="#F1FFFF"/>
+                            <animateTransform attributeName="transform"
+                            attributeType="XML"
+                            type="rotate"
+                            from="0"
+                            to="360"
+                            dur="2s"
+                            repeatCount="indefinite"/> 
+                        </svg>
+                    </button>
+                    <div class="textlinkContainer">
+
+                        <a class="textlink" routerLink="/registration">Or sign up</a>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+    </form>
+</div>
